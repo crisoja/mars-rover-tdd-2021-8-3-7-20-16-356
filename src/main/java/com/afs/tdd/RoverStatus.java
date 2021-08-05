@@ -1,15 +1,34 @@
 package com.afs.tdd;
 
 public class RoverStatus {
+    private int locationX;
+    private int locationY;
+    private String direction;
+
+
     public RoverStatus(int locationX, int locationY, String direction) {
+        this.locationX = locationX;
+        this.locationY = locationY;
+        this.direction = direction;
 
     }
 
     public int getLocationX() {
-        return 0;
+        return locationX;
     }
 
     public int getLocationY() {
-        return 0;
+        return locationY;
     }
+
+    public String getDirection() {
+        return direction;
+    }
+
+    public void increment(){
+        locationY++;
+    }
+
+
+
 }
