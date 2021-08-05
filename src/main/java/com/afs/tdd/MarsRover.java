@@ -2,9 +2,11 @@ package com.afs.tdd;
 
 public class MarsRover {
     RoverStatus roverStatus;
-    private String[] direction = {"N","E","S","W"};
+    private static final String[] direction = {"N","E","S","W"};
     private static final String M = "M";
-    private static final String L ="L";
+    private static final String L = "L";
+    private static final String N = "N";
+
     public MarsRover(RoverStatus roverStatus) {
         this.roverStatus = roverStatus;
     }
@@ -25,13 +27,13 @@ public class MarsRover {
     }
 
     private void turnRight() {
-        if("N".equals(roverStatus.getDirection())){
+        if(N.equals(roverStatus.getDirection())){
             roverStatus.setDirection(direction[1]);
         }
     }
 
     private void turnLeft() {
-        if("N".equals(roverStatus.getDirection())){
+        if(N.equals(roverStatus.getDirection())){
         roverStatus.setDirection(direction[3]);
         }
     }
