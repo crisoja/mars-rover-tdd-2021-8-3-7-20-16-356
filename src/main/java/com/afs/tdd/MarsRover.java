@@ -20,6 +20,14 @@ public class MarsRover {
         else if(L.equals(command)){
             turnLeft();
         }
+        else
+            turnRight();
+    }
+
+    private void turnRight() {
+        if("N".equals(roverStatus.getDirection())){
+            roverStatus.setDirection(direction[1]);
+        }
     }
 
     private void turnLeft() {
@@ -27,6 +35,7 @@ public class MarsRover {
         roverStatus.setDirection(direction[3]);
         }
     }
+
 
     public void move(){
         roverStatus.increment();
