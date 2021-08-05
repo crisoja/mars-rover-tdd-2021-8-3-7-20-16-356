@@ -29,7 +29,7 @@ public class RoverStatus {
         this.direction = direction;
     }
 
-    public void increment(){
+    public void incrementY(){
         locationY++;
     }
 
