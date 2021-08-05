@@ -33,8 +33,4 @@ public class RoverStatus {
         locationY++;
     }
 
-    public void rotateDirection(){
-
-    }
-
 }

@@ -3,6 +3,8 @@ package com.afs.tdd;
 public class MarsRover {
     RoverStatus roverStatus;
     private String[] direction = {"N","E","S","W"};
+    private static final String M = "M";
+    private static final String L ="L";
     public MarsRover(RoverStatus roverStatus) {
         this.roverStatus = roverStatus;
     }
@@ -12,10 +14,10 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) {
-        if ("M".equals(command)) {
+        if (M.equals(command)) {
             move();
         }
-        else if("L".equals(command)){
+        else if(L.equals(command)){
             turnLeft();
         }
     }
