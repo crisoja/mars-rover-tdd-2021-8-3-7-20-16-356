@@ -66,8 +66,9 @@ public class MarsRover {
         }else  if(direction[3].equals(roverStatus.getDirection())){
             roverStatus.decrementX();
         }
+    }
 
-
+    public void executeCommands(String commands) {
     }
 }
 
