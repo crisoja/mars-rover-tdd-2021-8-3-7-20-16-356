@@ -29,31 +29,28 @@ public class MarsRover {
         if(direction[0].equals(roverStatus.getDirection())){
             roverStatus.setDirection(direction[1]);
         }
-        else if(direction[2].equals(roverStatus.getDirection())){
-            roverStatus.setDirection(direction[3]);
-        }
         else if(direction[1].equals(roverStatus.getDirection())){
             roverStatus.setDirection(direction[2]);
         }
-        else if(direction[3].equals(roverStatus.getDirection())){
-            roverStatus.setDirection(direction[0]);
+        else if(direction[2].equals(roverStatus.getDirection())){
+        roverStatus.setDirection(direction[3]);
         }
+        else
+            roverStatus.setDirection(direction[0]);
     }
 
     private void turnLeft() {
         if(direction[0].equals(roverStatus.getDirection())){
         roverStatus.setDirection(direction[3]);
         }
-        else if(direction[2].equals(roverStatus.getDirection())){
-            roverStatus.setDirection(direction[1]);
-        }
         else if(direction[1].equals(roverStatus.getDirection())){
             roverStatus.setDirection(direction[0]);
         }
-        else if(direction[3].equals(roverStatus.getDirection())){
-            roverStatus.setDirection(direction[2]);
+        else if(direction[2].equals(roverStatus.getDirection())){
+            roverStatus.setDirection(direction[1]);
         }
-
+        else
+            roverStatus.setDirection(direction[2]);
     }
 
     public void move() {
@@ -63,12 +60,11 @@ public class MarsRover {
             roverStatus.incrementY();
         } else if (direction[1].equals(roverStatus.getDirection())){
             roverStatus.incrementX();
-        }else  if(direction[3].equals(roverStatus.getDirection())){
+        } else
             roverStatus.decrementX();
-        }
     }
 
-    public void executeCommands(String commands) {
+    public void executeMultipleCommands(String commands) {
         for(int i = 0; i < commands.length(); i++){
             executeCommand(String.valueOf(commands.charAt(i)));
         }
