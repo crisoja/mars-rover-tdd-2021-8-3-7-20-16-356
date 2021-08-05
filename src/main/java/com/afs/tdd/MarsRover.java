@@ -69,6 +69,9 @@ public class MarsRover {
     }
 
     public void executeCommands(String commands) {
+        for(int i = 0; i < commands.length(); i++){
+            executeCommand(String.valueOf(commands.charAt(i)));
+        }
     }
 }
 
