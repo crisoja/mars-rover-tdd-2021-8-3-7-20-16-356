@@ -33,7 +33,7 @@ public class RoverStatus {
         locationY++;
     }
 
-    public void decrement(){
+    public void decrementY(){
         locationY--;
     }
 
