@@ -9,4 +9,8 @@ public class MarsRover {
     public RoverStatus getRoverStatus() {
         return null;
     }
+
+    public void executeCommand(String command) {
+        
+    }
 }
