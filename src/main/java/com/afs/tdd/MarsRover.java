@@ -5,7 +5,6 @@ public class MarsRover {
     private static final String[] direction = {"N","E","S","W"};
     private static final String M = "M";
     private static final String L = "L";
-    private static final String N = "N";
 
     public MarsRover(RoverStatus roverStatus) {
         this.roverStatus = roverStatus;
@@ -27,13 +26,13 @@ public class MarsRover {
     }
 
     private void turnRight() {
-        if(N.equals(roverStatus.getDirection())){
+        if(direction[0].equals(roverStatus.getDirection())){
             roverStatus.setDirection(direction[1]);
         }
     }
 
     private void turnLeft() {
-        if(N.equals(roverStatus.getDirection())){
+        if(direction[0].equals(roverStatus.getDirection())){
         roverStatus.setDirection(direction[3]);
         }
         else if(direction[2].equals(roverStatus.getDirection())){
