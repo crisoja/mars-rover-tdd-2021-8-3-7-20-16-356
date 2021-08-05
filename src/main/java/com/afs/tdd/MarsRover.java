@@ -48,7 +48,11 @@ public class MarsRover {
             roverStatus.decrement();
         } else if (direction[0].equals(roverStatus.getDirection())) {
             roverStatus.increment();
+        } else if (direction[1].equals(roverStatus.getDirection())){
+            roverStatus.incrementX();
         }
+
+
     }
 }
 

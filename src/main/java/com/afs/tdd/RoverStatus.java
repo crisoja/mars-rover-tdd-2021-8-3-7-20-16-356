@@ -37,4 +37,9 @@ public class RoverStatus {
         locationY--;
     }
 
+    public void incrementX(){
+        locationX++;
+    }
+
+
 }
