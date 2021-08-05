@@ -41,5 +41,9 @@ public class RoverStatus {
         locationX++;
     }
 
+    public void decrementX(){
+        locationX--;
+    }
+
 
 }
