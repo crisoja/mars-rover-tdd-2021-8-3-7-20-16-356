@@ -2,10 +2,8 @@ package com.afs.tdd;
 
 public class MarsRover {
     RoverStatus roverStatus;
-    private static final String[] direction = {"N","E","S","W"};
     private static final String MOVE = "M";
     private static final String LEFT = "L";
-
 
     public MarsRover(RoverStatus roverStatus) {
         this.roverStatus = roverStatus;
@@ -25,41 +23,40 @@ public class MarsRover {
         else
             turnRight();
     }
-
     private void turnRight() {
-        if(direction[0].equals(roverStatus.getDirection())){
-            roverStatus.setDirection(direction[1]);
+        if(DirectionEnum.North.direction.equals(roverStatus.getDirection())){
+            roverStatus.setDirection(DirectionEnum.East.direction);
         }
-        else if(direction[1].equals(roverStatus.getDirection())){
-            roverStatus.setDirection(direction[2]);
+        else if(DirectionEnum.East.direction.equals(roverStatus.getDirection())){
+            roverStatus.setDirection(DirectionEnum.South.direction);
         }
-        else if(direction[2].equals(roverStatus.getDirection())){
-        roverStatus.setDirection(direction[3]);
+        else if(DirectionEnum.South.direction.equals(roverStatus.getDirection())){
+        roverStatus.setDirection(DirectionEnum.West.direction);
         }
         else
-            roverStatus.setDirection(direction[0]);
+            roverStatus.setDirection(DirectionEnum.North.direction);
     }
 
     private void turnLeft() {
-        if(direction[0].equals(roverStatus.getDirection())){
-        roverStatus.setDirection(direction[3]);
+        if(DirectionEnum.North.direction.equals(roverStatus.getDirection())){
+        roverStatus.setDirection(DirectionEnum.West.direction);
         }
-        else if(direction[1].equals(roverStatus.getDirection())){
-            roverStatus.setDirection(direction[0]);
+        else if(DirectionEnum.East.direction.equals(roverStatus.getDirection())){
+            roverStatus.setDirection(DirectionEnum.North.direction);
         }
-        else if(direction[2].equals(roverStatus.getDirection())){
-            roverStatus.setDirection(direction[1]);
+        else if(DirectionEnum.South.direction.equals(roverStatus.getDirection())){
+            roverStatus.setDirection(DirectionEnum.East.direction);
         }
         else
-            roverStatus.setDirection(direction[2]);
+            roverStatus.setDirection(DirectionEnum.South.direction);
     }
 
     public void move() {
-        if (direction[2].equals(roverStatus.getDirection())) {
+        if (DirectionEnum.South.direction.equals(roverStatus.getDirection())) {
             roverStatus.decrementY();
-        } else if (direction[0].equals(roverStatus.getDirection())) {
+        } else if (DirectionEnum.North.direction.equals(roverStatus.getDirection())) {
             roverStatus.incrementY();
-        } else if (direction[1].equals(roverStatus.getDirection())){
+        } else if (DirectionEnum.East.direction.equals(roverStatus.getDirection())){
             roverStatus.incrementX();
         } else
             roverStatus.decrementX();
